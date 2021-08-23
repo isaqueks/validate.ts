@@ -13,7 +13,7 @@ const invalidPlates = [
     'BRAAS17'
 ]
 
-test('VehicleOldPlateValidation: validate, validateMasked, validateUnmasked', () => {
+test('VehicleMercosulPlateValidation: validate, validateMasked, validateUnmasked', () => {
 
     for (let i = 0; i < validPlates.length; i++) {
         const valid = validPlates[i];
@@ -22,17 +22,15 @@ test('VehicleOldPlateValidation: validate, validateMasked, validateUnmasked', ()
         expect(mercosulPlateValidator.validate(valid)).toBe(true);
         expect(mercosulPlateValidator.validate(invalid)).toBe(false);
 
-
-        // There is no "mask"
-        expect(mercosulPlateValidator.validateMasked(valid)).toBe(false);
-
+        // There is no difference as the mask is totally useless here
+        expect(mercosulPlateValidator.validateMasked(valid)).toBe(true);
         expect(mercosulPlateValidator.validateUnmasked(valid)).toBe(true);
 
     }
 
 });
 
-test('VehicleOldPlateValidation: insertMask, cleanMask', () => {
+test('VehicleMercosulPlateValidation: insertMask, cleanMask', () => {
 
     for (let i = 0; i < validPlates.length; i++) {
         const plate = validPlates[i];
