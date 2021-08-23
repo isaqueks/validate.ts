@@ -22,27 +22,35 @@ export default class MultipleValidation extends InputValidation {
     }
 
     public cleanMaskUnsafe(input: string): string {
+
+        let valueToReturn = input;
         for (const validation of this.validations) {
             if (validation.isMasked(input)) {
                 const clean = validation.cleanMaskUnsafe(input);
-                if (validation.validateUnmasked(clean)) {
-                    return clean;
+                // As the mask is being REMOVED, we expect
+                // that the string will get smaller
+                if (clean.length < valueToReturn.length && validation.validateUnmasked(clean)) {
+                    valueToReturn = clean;
                 }
             }
         }
-        return input;
+        return valueToReturn;
     }
 
     public insertMaskUnsafe(input: string): string {
+
+        let valueToReturn = input;
         for (const validation of this.validations) {
             if (!validation.isMasked(input)) {
                 const masked = validation.insertMaskUnsafe(input);
-                if (masked.length >= input.length && validation.validateMasked(masked)) {
-                    return masked;
+                // We can expected that, as long as the mask is being applied,
+                // it will get bigger
+                if ((masked.length > valueToReturn.length) && validation.validateMasked(masked)) {
+                    valueToReturn = masked;
                 }
             }
         }
-        return input;
+        return valueToReturn;
     }
 
     public validateMasked(input: string): boolean {
@@ -62,6 +70,10 @@ export default class MultipleValidation extends InputValidation {
             }
         }
         return false;
+    }
+
+    public override validate(input: string): boolean {
+        return this.getWhichValidates(input) != null;
     }
 
     public getWhichValidates(input: string): InputValidation {

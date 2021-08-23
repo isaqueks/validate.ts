@@ -5,12 +5,14 @@ const mercosulPlateValidator = new VehicleMercosulPlateValidation();
 // From: Google Images
 const validPlates = [
     'BRA2E19',
-    'BRA0S17'
+    'BRA0S17',
+    'BRA0S18'
 ]
 
 const invalidPlates = [
     'BRA2319',
-    'BRAAS17'
+    'BRAAS17',
+    'JZJ5869'
 ]
 
 test('VehicleMercosulPlateValidation: validate, validateMasked, validateUnmasked', () => {
