@@ -3,3 +3,5 @@ coverage
 jest.config.js
 package-lock.json
 tsconfig.json
+build
+./build

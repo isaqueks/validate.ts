@@ -4,7 +4,8 @@
   "description": "",
   "main": "validate.ts",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
