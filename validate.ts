@@ -14,6 +14,7 @@ import VehicleMercosulPlateValidation from "./src/genericValidations/vehicleMerc
 import VehicleOldPlateValidation from "./src/genericValidations/vehicleOldPlateValidation";
 import VehiclePlateValidation from "./src/genericValidations/vehiclePlateValidation";
 import VinValidation from "./src/genericValidations/vinValidation";
+import DocumentValidation from "./src/genericValidations/documentValidation";
 
 export {
     DateValidation,
@@ -26,6 +27,7 @@ export {
     CpfValidation,
     CnpjValidation,
     PhoneValidation,
+    DocumentValidation,
     InputValidation,
     MultipleValidation,
     RegexValidation
