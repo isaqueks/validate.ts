@@ -5,12 +5,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const regexValidation_1 = __importDefault(require("../regexValidation"));
 class DateValidation extends regexValidation_1.default {
+    get format() {
+        return this._format;
+    }
     constructor(format) {
         super(/^\d{8}$/, '**/**/****');
         this._format = format;
-    }
-    get format() {
-        return this._format;
     }
     validateParts(part1, part2) {
         if (this._format === 'DD/MM/YYYY') {

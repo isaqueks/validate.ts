@@ -6,17 +6,17 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const inputValidation_1 = __importDefault(require("./inputValidation"));
 const MASK_ANY_CHAR = '*';
 class RegexValidation extends inputValidation_1.default {
-    constructor(unmaskedRule, mask) {
-        super();
-        this._validationRule = unmaskedRule;
-        this._mask = mask;
-        this._isMaskUseless = mask.replace(/\*/g, '') === '';
-    }
     get mask() {
         return this._mask;
     }
     get validationRule() {
         return this._validationRule;
+    }
+    constructor(unmaskedRule, mask) {
+        super();
+        this._validationRule = unmaskedRule;
+        this._mask = mask;
+        this._isMaskUseless = mask.replace(/\*/g, '') === '';
     }
     isMasked(input) {
         if (input.length != this.mask.length) {

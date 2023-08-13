@@ -1,5 +1,5 @@
 import RegexValidation from "../regexValidation";
-export declare type DateFormat = 'MM/DD/YYYY' | 'DD/MM/YYYY';
+export type DateFormat = 'MM/DD/YYYY' | 'DD/MM/YYYY';
 export default class DateValidation extends RegexValidation {
     private _format;
     get format(): DateFormat;

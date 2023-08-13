@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.RegexValidation = exports.MultipleValidation = exports.InputValidation = exports.PhoneValidation = exports.CpfValidation = exports.CepValidation = exports.VinValidation = exports.VehiclePlateValidation = exports.VehicleOldPlateValidation = exports.VehicleMercosulPlateValidation = exports.RenavamValidation = exports.DateValidation = void 0;
+exports.RegexValidation = exports.MultipleValidation = exports.InputValidation = exports.PhoneValidation = exports.CnpjValidation = exports.CpfValidation = exports.CepValidation = exports.VinValidation = exports.VehiclePlateValidation = exports.VehicleOldPlateValidation = exports.VehicleMercosulPlateValidation = exports.RenavamValidation = exports.DateValidation = void 0;
 // Base classes
 const inputValidation_1 = __importDefault(require("./src/inputValidation"));
 exports.InputValidation = inputValidation_1.default;
@@ -14,6 +14,8 @@ exports.RegexValidation = regexValidation_1.default;
 // Validations
 const cepValidation_1 = __importDefault(require("./src/genericValidations/cepValidation"));
 exports.CepValidation = cepValidation_1.default;
+const cnpjValidation_1 = __importDefault(require("./src/genericValidations/cnpjValidation"));
+exports.CnpjValidation = cnpjValidation_1.default;
 const cpfValidation_1 = __importDefault(require("./src/genericValidations/cpfValidation"));
 exports.CpfValidation = cpfValidation_1.default;
 const phoneValidation_1 = __importDefault(require("./src/genericValidations/phoneValidation"));
