@@ -5,6 +5,7 @@ import RegexValidation from "./src/regexValidation";
 
 // Validations
 import CepValidation from "./src/genericValidations/cepValidation";
+import CnpjValidation from "./src/genericValidations/cnpjValidation";
 import CpfValidation from "./src/genericValidations/cpfValidation";
 import PhoneValidation from "./src/genericValidations/phoneValidation";
 import DateValidation from "./src/genericValidations/dateValidation";
@@ -23,6 +24,7 @@ export {
     VinValidation,
     CepValidation,
     CpfValidation,
+    CnpjValidation,
     PhoneValidation,
     InputValidation,
     MultipleValidation,
