@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.RegexValidation = exports.MultipleValidation = exports.InputValidation = exports.PhoneValidation = exports.CnpjValidation = exports.CpfValidation = exports.CepValidation = exports.VinValidation = exports.VehiclePlateValidation = exports.VehicleOldPlateValidation = exports.VehicleMercosulPlateValidation = exports.RenavamValidation = exports.DateValidation = void 0;
+exports.RegexValidation = exports.MultipleValidation = exports.InputValidation = exports.DocumentValidation = exports.PhoneValidation = exports.CnpjValidation = exports.CpfValidation = exports.CepValidation = exports.VinValidation = exports.VehiclePlateValidation = exports.VehicleOldPlateValidation = exports.VehicleMercosulPlateValidation = exports.RenavamValidation = exports.DateValidation = void 0;
 // Base classes
 const inputValidation_1 = __importDefault(require("./src/inputValidation"));
 exports.InputValidation = inputValidation_1.default;
@@ -32,3 +32,5 @@ const vehiclePlateValidation_1 = __importDefault(require("./src/genericValidatio
 exports.VehiclePlateValidation = vehiclePlateValidation_1.default;
 const vinValidation_1 = __importDefault(require("./src/genericValidations/vinValidation"));
 exports.VinValidation = vinValidation_1.default;
+const documentValidation_1 = __importDefault(require("./src/genericValidations/documentValidation"));
+exports.DocumentValidation = documentValidation_1.default;

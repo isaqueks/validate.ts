@@ -11,4 +11,5 @@ import VehicleMercosulPlateValidation from "./src/genericValidations/vehicleMerc
 import VehicleOldPlateValidation from "./src/genericValidations/vehicleOldPlateValidation";
 import VehiclePlateValidation from "./src/genericValidations/vehiclePlateValidation";
 import VinValidation from "./src/genericValidations/vinValidation";
-export { DateValidation, RenavamValidation, VehicleMercosulPlateValidation, VehicleOldPlateValidation, VehiclePlateValidation, VinValidation, CepValidation, CpfValidation, CnpjValidation, PhoneValidation, InputValidation, MultipleValidation, RegexValidation };
+import DocumentValidation from "./src/genericValidations/documentValidation";
+export { DateValidation, RenavamValidation, VehicleMercosulPlateValidation, VehicleOldPlateValidation, VehiclePlateValidation, VinValidation, CepValidation, CpfValidation, CnpjValidation, PhoneValidation, DocumentValidation, InputValidation, MultipleValidation, RegexValidation };
